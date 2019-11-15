@@ -1,0 +1,50 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "FdfdViSnZzKQa7+LUZXzGTycbnE=",
+			"path": "github.com/google/gopacket",
+			"revision": "0ad7f2610e344e58c1c95e2adda5c3258da8e97b",
+			"revisionTime": "2019-10-09T16:37:24Z"
+		},
+		{
+			"checksumSHA1": "VoJIf/nW58bLfCTNGTZGv0NNx8Q=",
+			"path": "github.com/google/gopacket/layers",
+			"revision": "0ad7f2610e344e58c1c95e2adda5c3258da8e97b",
+			"revisionTime": "2019-10-09T16:37:24Z"
+		},
+		{
+			"checksumSHA1": "YIP1x1HJ3emx/O7nqLVx0RSOMAQ=",
+			"path": "github.com/google/gopacket/pcap",
+			"revision": "0ad7f2610e344e58c1c95e2adda5c3258da8e97b",
+			"revisionTime": "2019-10-09T16:37:24Z"
+		},
+		{
+			"checksumSHA1": "cTnCjP43tMbFk/xxwa3DwPH4xvk=",
+			"path": "github.com/oschwald/geoip2-golang",
+			"revision": "5cb0648ad3d78ca84eccb54f80fbf9941e3684ba",
+			"revisionTime": "2019-10-04T18:33:50Z"
+		},
+		{
+			"checksumSHA1": "ACqAp37w5EiWkRuAY3m+8cbsxyc=",
+			"path": "github.com/oschwald/maxminddb-golang",
+			"revision": "63ce2a5f3d03036d809197719ddd123e11187d6e",
+			"revisionTime": "2019-09-11T02:51:07Z"
+		},
+		{
+			"checksumSHA1": "3MIBhaOhlaGUd/C7WtWDnS3JWSc=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "4c7a9d0fe056d9d1de37e1409ca8a5c17accb46a",
+			"revisionTime": "2019-11-13T16:21:06Z"
+		},
+		{
+			"checksumSHA1": "ZONfuOn1ys3t+h6B69VPcSPVipc=",
+			"origin": "github.com/google/gopacket/vendor/golang.org/x/sys/windows",
+			"path": "golang.org/x/sys/windows",
+			"revision": "0ad7f2610e344e58c1c95e2adda5c3258da8e97b",
+			"revisionTime": "2019-10-09T16:37:24Z"
+		}
+	],
+	"rootPath": "github.com/alexkarlov/sniffer"
+}
