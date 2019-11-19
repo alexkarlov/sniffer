@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	ipOut := listeners.ListenIP()
-	dnsOut := listeners.ListenDNS()
+	ipOut := listeners.ListenIP("en0")
+	dnsOut := listeners.ListenDNS("en0")
 	var ipPackets, dnsPackets string
 	// ANSI control symbol - save the cursor position
 	// more details here http://ascii-table.com/ansi-escape-sequences.php
@@ -17,11 +17,11 @@ func main() {
 		case ipPackets = <-ipOut:
 			fmt.Print("\033[u")
 			fmt.Print("\033[J")
-			fmt.Printf("IP packets:\n%s\nDNS packets:\n%s", ipPackets, dnsPackets)
+			fmt.Print(ipPackets, dnsPackets)
 		case dnsPackets = <-dnsOut:
 			fmt.Print("\033[u")
 			fmt.Print("\033[J")
-			fmt.Printf("IP packets:\n%s\nDNS packets:\n%s", ipPackets, dnsPackets)
+			fmt.Printf(ipPackets, dnsPackets)
 		}
 	}
 }
