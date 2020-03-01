@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/alexkarlov/sniffer/listeners"
 )
 
 func main() {
-	ipOut := listeners.ListenIP("en0")
-	dnsOut := listeners.ListenDNS("en0")
+	ipOut := listeners.ListenIP("any")
+	dnsOut := listeners.ListenDNS("any")
 	var ipPackets, dnsPackets string
 	// ANSI control symbol - save the cursor position
 	// more details here http://ascii-table.com/ansi-escape-sequences.php
@@ -21,7 +22,7 @@ func main() {
 		case dnsPackets = <-dnsOut:
 			fmt.Print("\033[u")
 			fmt.Print("\033[J")
-			fmt.Printf(ipPackets, dnsPackets)
+			fmt.Print(ipPackets, dnsPackets)
 		}
 	}
 }

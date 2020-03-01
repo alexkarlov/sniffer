@@ -1,3 +1,4 @@
 #/bin/bash
-up: 
-	sudo go run .
+up:
+	docker build --no-cache -t sniffer .
+	docker run -it --rm --name my-sniffer sniffer

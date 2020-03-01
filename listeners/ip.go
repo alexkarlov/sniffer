@@ -3,18 +3,17 @@ package listeners
 import (
 	"encoding/binary"
 	"fmt"
+	"net"
+	"sort"
+
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
 	"github.com/google/gopacket/pcap"
 	"github.com/oschwald/geoip2-golang"
-	"net"
-	"sort"
 )
 
-var (
-	BPFIP = []pcap.BPFInstruction{
-		{0x6, 0, 0, 0x00040000},
-	}
+const (
+	BPFIP = "ip"
 )
 
 // IPPackets describes IP trafic
@@ -91,7 +90,7 @@ func ListenIP(device string) chan string {
 		panic(err)
 	}
 
-	if err := handle.SetBPFInstructionFilter(BPFIP); err != nil {
+	if err := handle.SetBPFFilter(BPFIP); err != nil {
 		panic(err)
 	}
 
